@@ -1,0 +1,10 @@
+.my-pagination /deep/ .ngx-pagination .current {
+  display: inline-block;
+  padding: 5px 25px;
+  background-color: #b6eb7a;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}

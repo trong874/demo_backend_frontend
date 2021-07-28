@@ -1,0 +1,48 @@
+<header class="header_section">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg custom_nav-container">
+      <a class="navbar-brand" href="index.html">
+            <span>
+              Eatveg
+            </span>
+      </a>
+      <div class="" id="">
+        <div class="container">
+          <div class=" mr-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav justify-content-between ">
+
+              <div class="user_option">
+                <li [hidden]="isLogin">
+                  <a class="" routerLink="/login">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  </a>
+                </li>
+                <li [hidden]="!isLogin">
+                  <a  href="" (click)="logout()">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>
+                  </a>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <div class="custom_menu-btn">
+          <button onclick="openNav()">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+        </div>
+        <div id="myNav" class="overlay">
+          <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="vegetables.html">VEGETABLES</a>
+            <a href="contact.html">CONTACT US</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

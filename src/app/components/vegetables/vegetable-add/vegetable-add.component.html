@@ -1,0 +1,42 @@
+<section class="contact_section layout_padding">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <div class="heading_container">
+          <h2>
+            Add Vegetable
+          </h2>
+        </div>
+        <div class="row">
+          <div class="col-md-10">
+            <div class="form_container contact-form">
+              <div *ngIf="errmessage" class="alert alert-danger">
+                <span>{{errmessage}}</span>
+              </div>
+              <form *ngIf="formAdd" [formGroup]="formAdd" (ngSubmit)="submit()">
+                <div>
+                  <input type="text" formControlName="name" placeholder="Name"/>
+                </div>
+                <div>
+                  <input type="file" formControlName="image" placeholder="Link Image" (change)="onFileSelect($event)">
+                </div>
+                <div>
+                  <input type="number" formControlName="price" placeholder="Price"/>
+                </div>
+                <div>
+                  <input formControlName="des" placeholder="Desciption"/>
+                </div>
+                <div class="btn_box">
+                  <button type="submit">Add</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

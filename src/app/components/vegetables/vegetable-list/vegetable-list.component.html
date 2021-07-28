@@ -1,0 +1,48 @@
+<section class="veg_section layout_padding">
+  <div class="container">
+    <div class="heading_container heading_center">
+      <h2>
+        Our Vegetables
+      </h2>
+      <p>
+        which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure
+        there isn't an
+      </p>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-lg-4" *ngFor="let vgt of vgtData |
+       paginate: { itemsPerPage: 9 ,
+                      currentPage: page,
+                       totalItems: totalLength}">
+        <div class="box">
+          <i class="fa fa-trash-o" aria-hidden="true" (click)="deleteVgt(vgt.id)"></i>
+          <i class="fa fa-cog" aria-hidden="true" routerLink="/vgt-edit/{{vgt.id}}"></i>
+          <div class="img-box">
+            <img src="http://127.0.0.1:8000/image/{{vgt.image}}" alt="">
+          </div>
+          <div class="detail-box">
+            <a href="">
+              {{vgt.name}}
+            </a>
+            <div class="price_box">
+              <h6 class="price_heading">
+                <span>$</span> {{vgt.price}}
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pagination-controls class="text-center my-pagination" (pageChange)="page = $event"></pagination-controls>
+    <div class="btn-box">
+      <a href="">
+        View More
+      </a>
+    </div>
+    <div class="btn-box">
+      <a routerLink="/vgt-add">
+        Add Vegetable
+      </a>
+    </div>
+  </div>
+</section>
